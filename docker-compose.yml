@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    container_name: sds
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_USER=sds
+      - POSTGRES_PASSWORD=sds
+      - POSTGRES_DATABASE=sds
+    command: postgres
+    restart: always
+
+  redis:
+    image: redis:alpine3.14
+    container_name: redis-sds
+    ports:
+      - '6379-6379'
