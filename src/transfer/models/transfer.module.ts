@@ -1,5 +1,4 @@
 import { Column, Model, Table } from 'sequelize-typescript';
-import {UserEntity} from "../../user/models/user.module";
 
 @Table
 export class TransferEntity extends Model {

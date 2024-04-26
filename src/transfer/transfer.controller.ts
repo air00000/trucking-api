@@ -1,15 +1,14 @@
-import {Body, Controller, Get, Post} from '@nestjs/common';
-import {TransferService} from "./transfer.service";
-import {CreateTransferDTO} from "./dto";
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { CreateTransferDTO } from './dto';
+import { TransferService } from './transfer.service';
 
-
-@Controller('transfers')
+@Controller('transfer')
 export class TransferController {
   constructor(private readonly transferService: TransferService) {}
 
   @Post('create')
-  createTransfers(@Body() dto: CreateTransferDTO){
-    return this.transferService.createTransfer(dto)
+  createTransfers(@Body() dto: CreateTransferDTO) {
+    return this.transferService.createTransfer(dto);
   }
 
   @Get('get')
