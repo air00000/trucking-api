@@ -8,7 +8,13 @@ export class CreateUserDTO {
   @IsString()
   email: string;
   @IsString()
-  phone: number;
+  phone: string;
+  @IsString()
+  password: string;
+}
+export class SignInUserDTO {
+  @IsString()
+  email: string;
   @IsString()
   password: string;
 }
