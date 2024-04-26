@@ -11,7 +11,7 @@ export class UserController {
     return this.userService.createUser(dto);
   }
 
-  @Get('get-users')
+  @Get('get-user')
   getUsers() {
     return this.userService.getUsers('Giorno');
   }
